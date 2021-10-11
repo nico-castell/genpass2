@@ -1,0 +1,7 @@
+# Ignore temporary files
+*~
+*.swp
+
+# Ignore build folder
+[Bb]uild/*
+[Oo]ut/*
