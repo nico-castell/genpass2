@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.0)
 
 # Project config
 set(PROJ "genpass2")
-set(VERS "0.1.1")
+set(VERS "0.1.2")
 
 project("${PROJ}" VERSION "${VERS}")
 add_executable("${PROJ}" "src/main.cpp")
@@ -33,12 +33,12 @@ set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Installs a command to generate very secur
 set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/nico-castell/genpass2")
 set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/README.md")
 
-# RPM (RHEL-based distros) - Use -DCMAKE_BINARY_RPM=ON flag to enable it
+# RPM (RHEL-based distros) - Use -DCPACK_BINARY_RPM=ON flag to enable it
 set(CPACK_RPM_FILE_NAME "RPM-DEFAULT")
 set(CPACK_RPM_PACKAGE_LICENSE "MIT") # SPDF License Identifier
 set(CPACK_RPM_CHANGELOG_FILE "${CMAKE_SOURCE_DIR}/CHANGELOG.txt")
 
-# DEB (Debian-based distros) - Use -DCMAKE_BINARY_DEB=ON flag to enable it
+# DEB (Debian-based distros) - Use -DCPACK_BINARY_DEB=ON flag to enable it
 set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "$ENV{USER}")
 

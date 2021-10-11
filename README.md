@@ -29,6 +29,10 @@ Windows.
 	```shell
 	genpass2 16 | xclip -selection clipboard -i
 	```
+- **Manpage:** You can view the manpage if you need to see this information in the command line.
+	```shell
+	man genpass2
+	```
 
 ---
 ## Build instructions and installation

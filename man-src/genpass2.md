@@ -1,9 +1,9 @@
-% genpass2(1) 0.1.0
+% genpass2(1) 0.1.2
 % Nicolás Castellán
 % Oct 2021
 
 <!-- Use:                                                             -->
-<!--   pandoc binme.1.md -s -t man -o binme.1                         -->
+<!--   pandoc genpass2.1.md -s -t man -o genpass2.1                   -->
 <!-- to convert this markdown to groff format                         -->
 <!-- Choose from these sections:                                      -->
 <!-- 1. Executable programs: Or, shell commands.                      -->
@@ -28,6 +28,23 @@ genpass2 - Uses the device file /dev/urandom to genereate very secure passwords.
 **genpass** reads as many characters as specified by the first argument (8 characters if no
 arguments are passed) from /dev/urandom and then processes all the data to turn the randomness into
 human readable characters.
+
+## Usage
+- **Standalone:** You can run it without arguments, and it will default to an 8 character password,
+	or you can specify the length as follows:
+
+		genpass2 16
+
+	If you input a negative number (such as `-128`), the program will error and tell you that it's not
+	a valid number. Any arguments after the first will be ignored.
+- **Variable:** This is the recommended way. You store the output in a variable, so the password never appears on screen.
+
+		MY_PASS=$(genpass2 16)
+
+- **Clipboard:** You can also put the password in your clipboard using the `xclip` command.
+
+		genpass2 16 | xclip -selection clipboard -i
+
 
 # EXAMPLES
 **genpass2** 20  
