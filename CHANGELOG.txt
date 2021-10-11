@@ -1,2 +1,5 @@
+* Mon Oct 11 2021 Nicolás Castellán - 0.1.1-1
+- Fixed a typo and a missing description.
+
 * Mon Oct 11 2021 Nicolás Castellán - 0.1.0-1
 - Initial release

@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.0)
 
 # Project config
 set(PROJ "genpass2")
-set(VERS "0.1.0")
+set(VERS "0.1.1")
 
 project("${PROJ}" VERSION "${VERS}")
 add_executable("${PROJ}" "src/main.cpp")
@@ -29,7 +29,7 @@ install(
 # Common variables to all packagers
 set(CPACK_PACKAGE_NAME "${PROJ}")
 set(CPACK_PACKAGE_VERSION "${VERS}")
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Installs a command to generate very secure passwords from the command line.")
 set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/nico-castell/genpass2")
 set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/README.md")
 
