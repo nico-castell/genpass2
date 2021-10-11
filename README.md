@@ -2,7 +2,7 @@
 [![Commits since last release](https://img.shields.io/github/commits-since/nico-castell/genpass2/latest?label=Commits%20since%20last%20release&color=informational&logo=Git&logoColor=white&style=flat-square)](https://github.com/nico-castell/genpass2/commits)
 [![Release](https://img.shields.io/github/v/release/nico-castell/genpass2?label=Release&color=informational&logo=GitHub&logoColor=white&style=flat-square)](https://github.com/nico-castell/genpass2/releases)
 [![License](https://img.shields.io/github/license/nico-castell/genpass2?label=License&color=informational&logo=Open%20Source%20Initiative&logoColor=white&style=flat-square)](LICENSE)
-[![Lines of code](https://img.shields.io/tokei/lines/github/nico-castell/genpass2?label=Lines%20of%20code&color=informational&logo=Go&logoColor=white&style=flat-square)](https://github.com/nico-castell/genpass)
+[![Lines of code](https://img.shields.io/tokei/lines/github/nico-castell/genpass2?label=Lines%20of%20code&color=informational&logo=Go&logoColor=white&style=flat-square)](https://github.com/nico-castell/genpass2)
 [![CodeQL](https://img.shields.io/github/workflow/status/nico-castell/genpass2/CodeQL?label=CodeQL&logo=GitHub%20Actions&logoColor=white&style=flat-square)](https://github.com/nico-castell/genpass2/actions/workflows/codeql-analysis.yml)
 
 This is a replacement program for the [Golang](https://golang.org/) based
