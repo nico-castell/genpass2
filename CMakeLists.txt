@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.0)
 
 # Project config
 set(PROJ "genpass2")
-set(VERS "0.1.2")
+set(VERS "0.1.3")
 
 project("${PROJ}" VERSION "${VERS}")
 add_executable("${PROJ}" "src/main.cpp")

@@ -1,4 +1,4 @@
-% genpass2(1) 0.1.2
+% genpass2(1) 0.1.3
 % Nicolás Castellán
 % Oct 2021
 

@@ -34,5 +34,9 @@ int main(int argc, char *argv[])
 
 	std::cout << std::endl;
 
+	// Clean up
+	delete[] sentence;
+	f.close();
+
 	return 0;
 }

@@ -1,3 +1,6 @@
+* Tue Oct 12 2021 Nicolás Castellán - 0.1.3-1
+- The program now cleans up after itself
+
 * Mon Oct 11 2021 Nicolás Castellán - 0.1.2-1
 - Added information to the manpage.
 
