@@ -1,0 +1,17 @@
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+[*.{c,cpp,h,hpp}]
+charset = utf-8
+indent_style = tab
+indent_size = 3
+trim_trailing_whitespace = true
+
+[CMakeLists.txt]
+indent_style = tab
+indent_size = 3
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
