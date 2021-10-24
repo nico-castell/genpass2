@@ -1,3 +1,6 @@
+* Sat Oct 23 2021 Nicolás Castellán - 0.1.6-1
+- Fixed passwords ending with an extra space character.
+
 * Thu Oct 14 2021 Nicolás Castellán - 0.1.5-1
 - Initialize the main array with zeros.
 

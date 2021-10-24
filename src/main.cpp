@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 	f.read((char*)sentence, length);
 
 	// Process the data into readable characters
-	for (int64_t i = 0; i < length + 1; i++)
+	for (int64_t i = 0; i < length; i++)
 	{
 		sentence[i] = sentence[i] % differenceASCII;
 		sentence[i] = sentence[i] + minASCII;
