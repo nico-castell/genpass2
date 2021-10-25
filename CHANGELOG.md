@@ -3,6 +3,7 @@
 All significant changes to **genpass2** will be documented here.
 
 - [Released](#released)
+	- [Version 0.1.6 - *2021-10-23*](#version-016---2021-10-23)
 	- [Version 0.1.5 - *2021-10-14*](#version-015---2021-10-14)
 	- [Version 0.1.4 - *2021-10-12*](#version-014---2021-10-12)
 	- [Version 0.1.3 - *2021-10-12*](#version-013---2021-10-12)

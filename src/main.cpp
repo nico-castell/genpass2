@@ -8,30 +8,32 @@ const int differenceASCII = maxASCII - minASCII;
 int main(int argc, char* argv[])
 {
 	// Process arguments
-	int64_t length = 8;
+	unsigned long length = 8;
 
+	// The sentence array must be between 1 byte and 4 GiB, so if the number obtained from the srtol
+	// function is outside the bounds, the program must exit before attempting to allocate that much
+	// memory to the array.
 	if (argc > 1)
-		length = strtol(argv[1], NULL, 10);
+		length = strtoul(argv[1], NULL, 10);
 
-	if (length <= 0)
+	if (0 >= length || length > 4294967296)
 	{
-		fprintf(stderr, "ERROR: First argument is not a valid number\n");
+		std::cerr << "ERROR: First argument is not a valid number\n";
 		return 1;
 	}
 
-	// Get the random data
+	// Create the sentence array and get the random data
 	std::ifstream f("/dev/urandom");
-	uint8_t* sentence = new uint8_t[length + 1] { 0 };
+	uint8_t* sentence = new uint8_t[length] { 0 };
 	f.read((char*)sentence, length);
 
 	// Process the data into readable characters
-	for (int64_t i = 0; i < length; i++)
+	for (unsigned long i = 0; i < length; i++)
 	{
 		sentence[i] = sentence[i] % differenceASCII;
 		sentence[i] = sentence[i] + minASCII;
 		std::cout << sentence[i];
 	}
-
 	std::cout << std::endl;
 
 	// Clean up
