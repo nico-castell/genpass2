@@ -1,4 +1,4 @@
-% genpass2(1) 0.1.6
+% genpass2(1) 0.2.0
 % Nicolás Castellán
 % Oct 2021
 
@@ -36,8 +36,10 @@ human readable characters.
 		genpass2 16
 
 	If you input a negative number (such as `-128`), the program will error and tell you that it's not
-	a valid number. Any arguments after the first will be ignored.
-- **Variable:** This is the recommended way. You store the output in a variable, so the password never appears on screen.
+	a valid number. Any arguments after the first will be ignored. The maximum number of characters
+	the password can have is 4,294,967,296.
+- **Variable:** This is the recommended way. You store the output in a variable, so the password
+		never appears on screen.
 
 		MY_PASS=$(genpass2 16)
 

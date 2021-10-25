@@ -1,3 +1,7 @@
+* Mon Oct 25 2021 Nicolás Castellán - 0.2.0
+- Handle super large password requests by throwing an error. This required setting a password length
+  limit of 4,294,967,296 characters.
+
 * Sat Oct 23 2021 Nicolás Castellán - 0.1.6-1
 - Fixed passwords ending with an extra space character.
 
