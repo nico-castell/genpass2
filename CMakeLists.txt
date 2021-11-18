@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.16.0)
 # Project started with x86_64 architecture
 
+if("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
+	message(WARNING "This project is not meant to be run on Windows")
+endif()
+
 # Project config
 set(PROJ "genpass2")
 set(VERS "0.2.1")
