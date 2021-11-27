@@ -1,5 +1,6 @@
 #include <fstream>
 #include <iostream>
+#include <unistd.h>
 
 const int maxASCII = 127;
 const int minASCII = 32;
@@ -34,7 +35,9 @@ int main(int argc, char* argv[])
 		sentence[i] = sentence[i] + minASCII;
 		std::cout << sentence[i];
 	}
-	std::cout << std::endl;
+	// Do not send the newline character down a pipeline
+	if (isatty(fileno(stdout)))
+		std::cout << '\n';
 
 	// Clean up
 	delete[] sentence;

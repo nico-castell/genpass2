@@ -7,7 +7,7 @@ endif()
 
 # Project config
 set(PROJ "genpass2")
-set(VERS "0.2.1")
+set(VERS "0.2.2")
 
 project("${PROJ}" VERSION "${VERS}")
 add_executable("${PROJ}" "src/main.cpp")

@@ -3,6 +3,7 @@
 All significant changes to **genpass2** will be documented here.
 
 - [Released](#released)
+	- [Version 0.2.2 - *2021-11-27*](#version-022---2021-11-27)
 	- [Version 0.2.1 - *2021-11-16*](#version-021---2021-11-16)
 	- [Version 0.2.0 - *2021-10-25*](#version-020---2021-10-25)
 	- [Version 0.1.6 - *2021-10-23*](#version-016---2021-10-23)
@@ -14,6 +15,9 @@ All significant changes to **genpass2** will be documented here.
 	- [Version 0.1.0 - *2021-10-11*](#version-010---2021-10-11)
 
 ## Released
+### Version [0.2.2](https://github.com/nico-castell/genpass2/releases/tag/0.2.2) - *2021-11-27*
+Detect if the output of the program is not a terminal, if it isn't, don't print a newline character.
+
 ### Version [0.2.1](https://github.com/nico-castell/genpass2/releases/tag/0.2.1) - *2021-11-16*
 Added author information on the manpage, also started making debian packages.
 

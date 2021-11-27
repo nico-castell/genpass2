@@ -1,3 +1,6 @@
+* Sat Nov 27 2021 Nicolás Castellán - 0.2.2-1
+- Detect if stdout is a pipe, if it is, don't print the newline character.
+
 * Tue Nov 16 2021 Nicolás Castellán - 0.2.1-1
 - Added author information in the manpage.
 
