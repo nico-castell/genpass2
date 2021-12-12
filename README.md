@@ -66,7 +66,7 @@ compiler.
 
 ### Using Meson
 [Meson](https://mesonbuild.com/index.html) is a more modern build system, to use it you will need
-to install Meson, ninja, and a C++ compiler.
+to install Meson, and a C++ compiler.
 
 1. First clone this repository and change directory into it:
 	```shell
@@ -81,9 +81,10 @@ to install Meson, ninja, and a C++ compiler.
 	```shell
 	--prefix=~/.local  # To install this program for the current user
 	```
-3. Use ninja to build and install the project:
+3. Use meson to build and install the project:
 	```shell
-	ninja -C build install
+	cd build
+	meson install
 	```
 
 ---
