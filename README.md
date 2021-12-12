@@ -38,7 +38,9 @@ Windows.
 
 ---
 ## Build instructions and installation
-To build this project all you need is [CMake](https://cmake.org/) and a C++ compiler.
+### Using CMake
+To build this project using [CMake](https://cmake.org/), you will need to install CMake and a C++
+compiler.
 
 1. First clone this repository and change directory into it:
 	```shell
@@ -61,6 +63,28 @@ To build this project all you need is [CMake](https://cmake.org/) and a C++ comp
 	```
 4. (Optional) If you used one of the flags to package the project, you can use your package manager,
 	instead of the previous command, to install the program.
+
+### Using Meson
+[Meson](https://mesonbuild.com/index.html) is a more modern build system, to use it you will need
+to install Meson, ninja, and a C++ compiler.
+
+1. First clone this repository and change directory into it:
+	```shell
+	$ git clone https://gihtub.com/nico-castell/genpass2.git
+	$ cd genpass2
+	```
+2. Prepare the build folder using meson:
+	```shell
+	meson --buildtype=release build
+	```
+	You can also use the following flag:
+	```shell
+	--prefix=~/.local  # To install this program for the current user
+	```
+3. Use ninja to build and install the project:
+	```shell
+	ninja -C build install
+	```
 
 ---
 ## About
