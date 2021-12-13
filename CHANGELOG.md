@@ -3,6 +3,7 @@
 All significant changes to **genpass2** will be documented here.
 
 - [Released](#released)
+	- [Version 0.2.3 - *2021-12-13*](#version-023---2021-12-13)
 	- [Version 0.2.2 - *2021-11-27*](#version-022---2021-11-27)
 	- [Version 0.2.1 - *2021-11-16*](#version-021---2021-11-16)
 	- [Version 0.2.0 - *2021-10-25*](#version-020---2021-10-25)
@@ -15,6 +16,10 @@ All significant changes to **genpass2** will be documented here.
 	- [Version 0.1.0 - *2021-10-11*](#version-010---2021-10-11)
 
 ## Released
+### Version [0.2.3](https://github.com/nico-castell/genpass2/releases/tag/0.2.3) - *2021-12-13*
+The build system is now based on meson, CMake was deprecated. Additionally, the methods from .rpm
+and .deb packaging were changed to manual builds assisted with Makefiles.
+
 ### Version [0.2.2](https://github.com/nico-castell/genpass2/releases/tag/0.2.2) - *2021-11-27*
 Detect if the output of the program is not a terminal, if it isn't, don't print a newline character.
 
