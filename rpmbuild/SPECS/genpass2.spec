@@ -6,7 +6,8 @@ URL:     https://github.com/nico-castell/genpass2
 License: MIT
 Vendor:  Nicolás Castellán
 
-Source0: %{name}-%{version}.tar.zst
+%define _build_id_links none
+Source0: %{name}-%{version}.tar.gz
 BuildRequires: meson
 BuildRequires: gcc-c++
 
