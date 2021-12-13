@@ -9,5 +9,6 @@ rpm-pkg: make-directories
 make-directories:
 	@mkdir -p BUILD RPMS SOURCES SRPMS
 
+# Clean build artifacts
 clean:
 	@rm -rf BUILD* RPMS SRPMS SOURCES
