@@ -88,5 +88,53 @@ compiler.
 	instead of the previous command, to install the program.
 
 ---
+## Packaging the project and installing it
+Thanks to the use of Makefiles, packaging the project as a .rpm or .deb is very easy. Just follow
+these steps:
+
+- If you're on Fedora or another RHEL based OS:
+	```bash
+	cd rpmbuild
+	make
+	```
+
+	If you then want to install the package:
+	```bash
+	sudo dnf install ./RPMS/$(uname -m)/genpass2-0.2.3-1.*.rpm
+	```
+
+	If you want to remove the package:
+	```bash
+	sudo dnf remove genpass2
+	```
+
+	You will need to have `rpmdevtools` installed to build the package.
+
+- If you're on Debian or another Debian based OS:
+	```bash
+	cd debian
+	make
+	```
+
+	If you then want to install the package:
+	```bash
+	sudo apt install ./DEBS/genpass2_0.2.3-1*.deb
+	```
+
+	If you want to remove the package:
+	```bash
+	sudo apt remove genpass2
+	```
+
+	You will need to have `dpkg-dev` and `debhelper` installed to build the package.
+
+- You can also use the tarpkg directory to build a tar archive you can deploy in /usr/local in case
+	your system doesn't use either dnf (rpm) or apt (dpkg).
+	```bash
+	cd tarpkg
+	make
+	```
+
+---
 ## About
 This program and this repository are availabe under an [MIT License](LICENSE).
