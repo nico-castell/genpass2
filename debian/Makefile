@@ -2,7 +2,7 @@
 
 # Standard build
 deb-pkg: make-directories
-	@cd .. && dpkg-buildpackage -b -uc -us
+	@cd .. && dpkg-buildpackage -us -uc -b >/dev/null
 	@mv ~/genpass2*.buildinfo ~/genpass2*.changes ~/genpass2*.deb DEBS
 
 make-directories:

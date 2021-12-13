@@ -9,6 +9,7 @@ Vcs-Browser: https://github.com/nico-castell/genpass2
 
 Package: genpass2
 Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Installs a command to generate very secure passwords from the command line.
  This is a replacement program for the Golang based genpass proyect.
  By using C++ and reading the file /dev/urandom directly, this

@@ -1,68 +1,68 @@
 genpass2 (0.2.3-1) unstable; urgency=low
 
-  * Moved to the meson build system.
-  * Changed method for rpm packaging from CPack to manual packaging.
-  * Changed method for deb packaging from CPack to manual packaging.
+    * Moved to the meson build system.
+    * Changed method for rpm packaging from CPack to manual packaging.
+    * Changed method for deb packaging from CPack to manual packaging.
 
-  -- Nicolás Castellán <cnicolas.developer@gmail.com> Mon, 13 Dec 2021 13:36:00 -0300
+ -- Nicolás Castellán <cnicolas.developer@gmail.com>  Mon, 13 Dec 2021 13:36:00 -0300
 
 genpass2 (0.2.2-1) unstable; urgency=medium
 
-  * Detect if stdout is a pipe, if it is, don't print the newline character.
+    * Detect if stdout is a pipe, if it is, don't print the newline character.
 
-  -- Nicolás Castellán <cnicolas.developer@gmail.com> Sat, 27 Nov 2021 16:00:00 -0300
+ -- Nicolás Castellán <cnicolas.developer@gmail.com>  Sat, 27 Nov 2021 16:00:00 -0300
 
 genpass2 (0.2.1-1) unstable; urgency=low
 
-  * Added author information in the manpage
+    * Added author information in the manpage
 
-  -- Nicolás Castellán <cnicolas.developer@gmail.com> Tue, 16 Nov 2021 16:00:00 -0300
+ -- Nicolás Castellán <cnicolas.developer@gmail.com>  Tue, 16 Nov 2021 16:00:00 -0300
 
 genpass2 (0.2.0-1) unstable; urgency=high
 
-  * Handle super large password requests by throwing an error. This required setting a password
-    length limit of 4,294,976,296 characters.
+    * Handle super large password requests by throwing an error. This required setting a password
+      length limit of 4,294,976,296 characters.
 
-  -- Nicolás Castellán <cnicolas.developer@gmail.com> Mon, 25 Oct 2021 16:00:00 -0300
+ -- Nicolás Castellán <cnicolas.developer@gmail.com>  Mon, 25 Oct 2021 16:00:00 -0300
 
 genpass2 (0.1.6-1) unstable; urgency=high
 
-  * Fixed passwords ending with an extra space character.
+    * Fixed passwords ending with an extra space character.
 
-  -- Nicolás Castellán <cnicolas.developer@gmail.com> Sat, 23 Oct 2021 16:00:00 -0300
+ -- Nicolás Castellán <cnicolas.developer@gmail.com>  Sat, 23 Oct 2021 16:00:00 -0300
 
 genpass2 (0.1.5-1) unstable; urgency=low
 
-  * Initialize the main array with zeros.
+    * Initialize the main array with zeros.
 
-  -- Nicolás Castellán <cnicolas.developer@gmail.com> Thu, 14 Oct 2021 16:00:00 -0300
+ -- Nicolás Castellán <cnicolas.developer@gmail.com>  Thu, 14 Oct 2021 16:00:00 -0300
 
 genpass2 (0.1.4-1) unstable; urgency=low
 
-  * Fixed the description of RPM packages
+    * Fixed the description of RPM packages
 
-  -- Nicolás Castellán <cnicolas.developer@gmail.com> Tue, 12 Oct 2021 16:00:00 -0300
+ -- Nicolás Castellán <cnicolas.developer@gmail.com>  Tue, 12 Oct 2021 16:00:00 -0300
 
 genpass2 (0.1.3-1) unstable; urgency=low
 
-  * The program now cleans up after itself.
+    * The program now cleans up after itself.
 
-  -- Nicolás Castellán <cnicolas.developer@gmail.com> Tue, 12 Oct 2021 15:00:00 -0300
+ -- Nicolás Castellán <cnicolas.developer@gmail.com>  Tue, 12 Oct 2021 15:00:00 -0300
 
 genpass2 (0.1.2-1) unstable; urgency=low
 
-  * Added information to the manpage.
+    * Added information to the manpage.
 
-  -- Nicolás Castellán <cnicolas.developer@gmail.com> Mon, 11 Oct 2021 16:00:00 -0300
+ -- Nicolás Castellán <cnicolas.developer@gmail.com>  Mon, 11 Oct 2021 16:00:00 -0300
 
 genpass2 (0.1.1-1) unstable; urgency=low
 
-  * Fixed a type and a missing description.
+    * Fixed a type and a missing description.
 
-  -- Nicolás Castellán <cnicolas.developer@gmail.com> Mon, 11 Oct 2021 15:00:00 -0300
+ -- Nicolás Castellán <cnicolas.developer@gmail.com>  Mon, 11 Oct 2021 15:00:00 -0300
 
 genpass2 (0.1.0-1) unstable; urgency=low
 
-  * Initial release
+    * Initial release
 
-  -- Nicolás Castellán <cnicolas.developer@gmail.com> Mon, 11 Oct 2021 14:00:00 -0300
+ -- Nicolás Castellán <cnicolas.developer@gmail.com>  Mon, 11 Oct 2021 14:00:00 -0300
