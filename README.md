@@ -38,7 +38,30 @@ Windows.
 
 ---
 ## Build instructions and installation
-### Using CMake
+### Using Meson
+[Meson](https://mesonbuild.com/index.html) is a more modern build system, to use it you will need
+to install Meson, and a C++ compiler.
+
+1. First clone this repository and change directory into it:
+	```shell
+	$ git clone https://gihtub.com/nico-castell/genpass2.git
+	$ cd genpass2
+	```
+2. Prepare the build folder using meson:
+	```shell
+	meson --buildtype=release build
+	```
+	You can also use the following flag:
+	```shell
+	--prefix=~/.local  # To install this program for the current user
+	```
+3. Use meson to build and install the project:
+	```shell
+	cd build
+	meson install
+	```
+
+### Using CMake (deprecated)
 To build this project using [CMake](https://cmake.org/), you will need to install CMake and a C++
 compiler.
 
@@ -63,29 +86,6 @@ compiler.
 	```
 4. (Optional) If you used one of the flags to package the project, you can use your package manager,
 	instead of the previous command, to install the program.
-
-### Using Meson
-[Meson](https://mesonbuild.com/index.html) is a more modern build system, to use it you will need
-to install Meson, and a C++ compiler.
-
-1. First clone this repository and change directory into it:
-	```shell
-	$ git clone https://gihtub.com/nico-castell/genpass2.git
-	$ cd genpass2
-	```
-2. Prepare the build folder using meson:
-	```shell
-	meson --buildtype=release build
-	```
-	You can also use the following flag:
-	```shell
-	--prefix=~/.local  # To install this program for the current user
-	```
-3. Use meson to build and install the project:
-	```shell
-	cd build
-	meson install
-	```
 
 ---
 ## About

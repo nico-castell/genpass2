@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.16.0)
 # Project started with x86_64 architecture
 
+# ATTENTION: Building with CMake is deprecated for this project.
+
 if("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
 	message(WARNING "This project is not meant to be run on Windows")
 endif()
