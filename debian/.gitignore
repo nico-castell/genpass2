@@ -1,0 +1,6 @@
+# Ignore all the build artifacts
+debhelper*
+.debhelper*
+genpass2*
+files*
+DEBS
