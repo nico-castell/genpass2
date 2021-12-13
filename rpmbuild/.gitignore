@@ -1,0 +1,8 @@
+# Ignore artifacts from the build
+BUILD/*
+BUILDROOT
+SOURCES/*
+SPECS/*
+!SPECS/genpass2.spec
+SRPMS/*
+RPMS/*
