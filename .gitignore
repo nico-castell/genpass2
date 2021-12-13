@@ -5,3 +5,4 @@
 # Ignore build folder
 [Bb]uild/*
 [Oo]ut/*
+obj-*-linux-gnu

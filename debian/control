@@ -1,0 +1,16 @@
+Source: genpass2
+Maintainer: Nicolás Castellán <cnicolas.developer@gmail.com>
+Section: misc
+Priority: optional
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.5.1
+Homepage: https://github.com/nico-castell/genpass2
+Vcs-Browser: https://github.com/nico-castell/genpass2
+
+Package: genpass2
+Architecture: any
+Description: Installs a command to generate very secure passwords from the command line.
+ This is a replacement program for the Golang based genpass proyect.
+ By using C++ and reading the file /dev/urandom directly, this
+ program can achieve absurdly superior speeds when generating very
+ large ammounts of random data.
