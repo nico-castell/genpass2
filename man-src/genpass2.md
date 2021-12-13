@@ -1,4 +1,4 @@
-% genpass2(1) 0.2.2
+% genpass2(1) 0.2.3
 % Nicolás Castellán <cnicolas.developer@gmail.com>
 % Oct 2021
 
