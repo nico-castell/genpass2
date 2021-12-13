@@ -1,8 +1,9 @@
-# Ignore artifacts from the build
-BUILD/*
-BUILDROOT
-SOURCES/*
+# Ignore build folders
+BUILD*
+SOURCES
+SRPMS
+RPMS
+
+# Ignore any additional files in SPECS
 SPECS/*
 !SPECS/genpass2.spec
-SRPMS/*
-RPMS/*

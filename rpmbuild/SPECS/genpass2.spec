@@ -31,6 +31,7 @@ This is a replacement program for the Golang based genpass proyect. By using C++
 %changelog
 * Mon Dec 13 2021 Nicolás Castellán <cnicolas.developer@gmail.com> - 0.2.3-1
 - Moved to the meson build system.
+- Changed method for rpm packaging from CPack to manual packaging.
 
 * Sat Nov 27 2021 Nicolás Castellán <cnicolas.developer@gmail.com> - 0.2.2-1
 - Detect if stdout is a pipe, if it is, don't print the newline character.
