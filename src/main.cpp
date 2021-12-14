@@ -2,6 +2,11 @@
 #include <iostream>
 #include <unistd.h>
 
+// MIT License - Copyright (c) 2021 Nicolás Castellán <nicolas.developer@gmail.com>
+// SPDX License identifier: MIT
+// THE SOFTWARE IS PROVIDED "AS IS"
+// Read the included LICENSE file for more information
+
 const int maxASCII = 127;
 const int minASCII = 32;
 const int differenceASCII = maxASCII - minASCII;
