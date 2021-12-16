@@ -29,10 +29,11 @@ int main(int argc, char* argv[])
 	// Prepare reception of random data
 	FILE* urandom = fopen("/dev/urandom", "rb");  // /dev/urandom file
 
-	unsigned char *h, *t;                                  // Pointers to head and tail of the array
-	int size_diff = (length + 1) * sizeof(unsigned char);  // Get the size in bytes of the array
-	h = malloc(size_diff);                                 // Allocate memory for the array
-	t = h + size_diff;                                     // Point t to the tail of the array
+	unsigned char *h, *t;                     // Pointers to head and tail of the array
+	int sizeof_char = sizeof(unsigned char);  // Get the size of a character
+	int size_diff = (length)*sizeof_char;     // Get the size in bytes of the array
+	h = malloc(size_diff);                    // Allocate memory for the array
+	t = h + size_diff;                        // Point t to the tail of the array
 
 	// Bail out to prevent segfaults if malloc fails
 	if (h == NULL)
@@ -42,10 +43,10 @@ int main(int argc, char* argv[])
 	}
 
 	// Read all the random data at once
-	fgets((char*)h, size_diff / sizeof(unsigned char), urandom);
+	fread(h, sizeof_char, length, urandom);
 
 	// Process all the data using a moving pointer
-	for (unsigned char* p = h; p < t; p += sizeof(unsigned char))
+	for (unsigned char* p = h; p < t; p += sizeof_char)
 	{
 		*p = *p % DIFF_ASCII;
 		*p = *p + MIN_ASCII;

@@ -1,6 +1,6 @@
 Name:    genpass2
-Version: 1.0.0
-Release: 1%{?dist}
+Version: 1.0.1
+Release: 1
 Summary: Installs a command to generate very secure passwords from the command line.
 URL:     https://github.com/nico-castell/genpass2
 License: MIT
@@ -29,6 +29,12 @@ This is a replacement program for the Golang based genpass proyect. By using C a
 %{_mandir}/man1/genpass2.1.*
 
 %changelog
+* Thu Dec 16 2021 Nicolás Castellán <cnicolas.developer@gmail.com> - 1.0.1-1
+- Fixed wrong function call, from fgets() to fread(), this was causing the program to generate
+  incomplete passwords.
+- Fixed program outputting an extra character, if you asked for a 16 character password, it
+  would print a 17 character password.
+
 * Thu Dec 16 2021 Nicolás Castellán <cnicolas.developer@gmail.com> - 1.0.0-1
 - The project is no longer written in C++, it was rewritten in C.
 - Tweaks in how the data is processed and printed resulted in significant performance improvements.

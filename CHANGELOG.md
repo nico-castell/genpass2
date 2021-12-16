@@ -3,6 +3,7 @@
 All significant changes to **genpass2** will be documented here.
 
 - [Released](#released)
+	- [Version 1.0.1 - *2021-12-16*](#version-101---2021-12-16)
 	- [Version 1.0.0 - *2021-12-16*](#version-100---2021-12-16)
 	- [Version 0.2.3 - *2021-12-13*](#version-023---2021-12-13)
 	- [Version 0.2.2 - *2021-11-27*](#version-022---2021-11-27)
@@ -17,6 +18,12 @@ All significant changes to **genpass2** will be documented here.
 	- [Version 0.1.0 - *2021-10-11*](#version-010---2021-10-11)
 
 ## Released
+### Version [1.0.1](https://github.com/nico-castell/genpass2/releases/tag/1.0.1) - *2021-12-16*
+Well, this is embarrasing. I called `fgets()` instead of `fread()` which meant that the program
+didn't always output a complete password, that was fixed. But as if that wasn't enough, the program
+would output one more character than requested, so if you ran **genpass2 16** the program would
+print a 17 character password, that was fixed too.
+
 ### Version [1.0.0](https://github.com/nico-castell/genpass2/releases/tag/1.0.0) - *2021-12-16*
 The project was transitioned from C++ to C. This, and some tweaks in how the random data is
 processed and dumped to stdout resulted in significant performance improvements. Additionally, CMake

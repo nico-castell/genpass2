@@ -75,7 +75,7 @@ these steps:
 
 	If you then want to install the package:
 	```bash
-	sudo dnf install ./RPMS/$(uname -m)/genpass2-1.0.0-1.*.rpm
+	sudo dnf install ./RPMS/$(uname -m)/genpass2-1.0.1-1.*.rpm
 	```
 
 	If you want to remove the package:
@@ -93,7 +93,7 @@ these steps:
 
 	If you then want to install the package:
 	```bash
-	sudo apt install ./DEBS/genpass2_1.0.0-1*.deb
+	sudo apt install ./DEBS/genpass2_1.0.1-1*.deb
 	```
 
 	If you want to remove the package:

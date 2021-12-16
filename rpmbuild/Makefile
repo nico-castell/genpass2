@@ -1,5 +1,5 @@
 # This is the Makefile to create an rpm package
-VERSION = 1.0.0
+VERSION = 1.0.1
 
 # Standard build
 rpm-pkg: make-source
