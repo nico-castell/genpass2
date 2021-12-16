@@ -40,8 +40,8 @@ Windows.
 ---
 ## Build instructions and installation
 ### Using Meson
-[Meson](https://mesonbuild.com/index.html) is a more modern build system, to use it you will need
-to install Meson, and a C compiler.
+[Meson](https://mesonbuild.com/index.html) is a modern build system, to use it you will need to
+install Meson, and a C compiler.
 
 1. First clone this repository and change directory into it:
 	```shell
