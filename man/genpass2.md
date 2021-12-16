@@ -1,6 +1,6 @@
-% genpass2(1) 0.2.3
+% genpass2(1) 1.0.0
 % Nicolás Castellán <cnicolas.developer@gmail.com>
-% Oct 2021
+% Dec 2021
 
 <!-- Use:                                                             -->
 <!--   pandoc genpass2.1.md -s -t man -o genpass2.1                   -->
@@ -58,6 +58,9 @@ G*b9APs=DX^q-(&J@%x@
 
 **1**
 : The first argument could not be parsed into a valid number.
+
+**2**
+: The program could not allocate enough memory for the password.
 
 # COPYRIGHT
 Copyright © Nicolás Castellán 2021. License MIT. This software is provided "AS IS", there's no
