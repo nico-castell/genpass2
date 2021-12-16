@@ -10,4 +10,8 @@ executable(
 	install: true
 )
 
+if build_machine.system() == 'windows'
+	message('This project is not meant to be run on Windows')
+endif
+
 install_man('man/genpass2.1')
