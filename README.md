@@ -2,13 +2,14 @@
 [![Commits since last release](https://img.shields.io/github/commits-since/nico-castell/genpass2/latest?label=Commits%20since%20last%20release&color=informational&logo=Git&logoColor=white&style=flat-square)](https://github.com/nico-castell/genpass2/commits)
 [![Release](https://img.shields.io/github/v/release/nico-castell/genpass2?label=Release&color=informational&logo=GitHub&logoColor=white&style=flat-square)](https://github.com/nico-castell/genpass2/releases)
 [![License](https://img.shields.io/github/license/nico-castell/genpass2?label=License&color=informational&logo=Open%20Source%20Initiative&logoColor=white&style=flat-square)](LICENSE)
-[![Lines of code](https://img.shields.io/tokei/lines/github/nico-castell/genpass2?label=Lines%20of%20code&color=informational&logo=Go&logoColor=white&style=flat-square)](https://github.com/nico-castell/genpass2)
+[![Lines of code](https://img.shields.io/tokei/lines/github/nico-castell/genpass2?label=Lines%20of%20code&color=informational&logo=C&logoColor=white&style=flat-square)](https://github.com/nico-castell/genpass2)
 [![CodeQL](https://img.shields.io/github/workflow/status/nico-castell/genpass2/CodeQL?label=CodeQL&logo=GitHub%20Actions&logoColor=white&style=flat-square)](https://github.com/nico-castell/genpass2/actions/workflows/codeql-analysis.yml)
 
 This is a replacement program for the [Golang](https://golang.org/) based
-[genpass](https://github.com/nico-castell/genpass) proyect. By using [C++](https://isocpp.org/) and
-reading the file `/dev/urandom` directly, this program can achieve absurdly superior speeds when
-generating very large ammounts of random data.
+[genpass](https://github.com/nico-castell/genpass) proyect. By using
+[C](https://en.wikipedia.org/wiki/C_(programming_language)) and reading the file `/dev/urandom`
+directly, this program can achieve absurdly superior speeds when generating very large ammounts of
+random data.
 
 Note that, unlike [genpass](https://github.com/nico-castell/genpass), this program does not run on
 Windows.
@@ -40,7 +41,7 @@ Windows.
 ## Build instructions and installation
 ### Using Meson
 [Meson](https://mesonbuild.com/index.html) is a more modern build system, to use it you will need
-to install Meson, and a C++ compiler.
+to install Meson, and a C compiler.
 
 1. First clone this repository and change directory into it:
 	```shell
@@ -58,34 +59,8 @@ to install Meson, and a C++ compiler.
 3. Use meson to build and install the project:
 	```shell
 	cd build
-	meson install
+	meson install -C build
 	```
-
-### Using CMake (deprecated)
-To build this project using [CMake](https://cmake.org/), you will need to install CMake and a C++
-compiler.
-
-1. First clone this repository and change directory into it:
-	```shell
-	$ git clone https://gihtub.com/nico-castell/genpass2.git
-	$ cd genpass2
-	```
-2. Prepare the build folder using CMake:
-	```shell
-	$ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
-	```
-	You can also use the following flags:
-	```shell
-	-DCMAKE_INSTALL_PREFIX=~/.local  # To install this program for the current user
-	-DCPACK_BINARY_DEB=ON            # To tell CMake to enable packaging in .deb format
-	-DCPACK_BINARY_RPM=ON            # To tell CMake to enable packaging in .rpm format
-	```
-3. Use CMake to build and install the project:
-	```shell
-	$ cmake --build build --target install
-	```
-4. (Optional) If you used one of the flags to package the project, you can use your package manager,
-	instead of the previous command, to install the program.
 
 ---
 ## Packaging the project and installing it
@@ -100,7 +75,7 @@ these steps:
 
 	If you then want to install the package:
 	```bash
-	sudo dnf install ./RPMS/$(uname -m)/genpass2-0.2.3-1.*.rpm
+	sudo dnf install ./RPMS/$(uname -m)/genpass2-1.0.0-1.*.rpm
 	```
 
 	If you want to remove the package:
@@ -118,7 +93,7 @@ these steps:
 
 	If you then want to install the package:
 	```bash
-	sudo apt install ./DEBS/genpass2_0.2.3-1*.deb
+	sudo apt install ./DEBS/genpass2_1.0.0-1*.deb
 	```
 
 	If you want to remove the package:
