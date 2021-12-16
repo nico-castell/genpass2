@@ -12,6 +12,6 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Installs a command to generate very secure passwords from the command line.
  This is a replacement program for the Golang based genpass proyect.
- By using C++ and reading the file /dev/urandom directly, this
+ By using C and reading the file /dev/urandom directly, this
  program can achieve absurdly superior speeds when generating very
  large ammounts of random data.

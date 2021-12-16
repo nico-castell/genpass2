@@ -1,5 +1,5 @@
 Name:    genpass2
-Version: 0.2.3
+Version: 1.0.0
 Release: 1%{?dist}
 Summary: Installs a command to generate very secure passwords from the command line.
 URL:     https://github.com/nico-castell/genpass2
@@ -9,10 +9,10 @@ Vendor:  Nicolás Castellán
 %define _build_id_links none
 Source0: %{name}-%{version}.tar.gz
 BuildRequires: meson
-BuildRequires: gcc-c++
+BuildRequires: gcc
 
 %description
-This is a replacement program for the Golang based genpass proyect. By using C++ and reading the file /dev/urandom directly, this program can achieve absurdly superior speeds when generating very large ammounts of random data.
+This is a replacement program for the Golang based genpass proyect. By using C and reading the file /dev/urandom directly, this program can achieve absurdly superior speeds when generating very large ammounts of random data.
 
 %prep
 %autosetup
@@ -29,6 +29,11 @@ This is a replacement program for the Golang based genpass proyect. By using C++
 %{_mandir}/man1/genpass2.1.*
 
 %changelog
+* Thu Dec 16 2021 Nicolás Castellán <cnicolas.developer@gmail.com> - 1.0.0-1
+- The project is no longer written in C++, it was rewritten in C.
+- Tweaks in how the data is processed and printed resulted in significant performance improvements.
+- CMake was purged from the project, it only uses Meson now.
+
 * Mon Dec 13 2021 Nicolás Castellán <cnicolas.developer@gmail.com> - 0.2.3-1
 - Moved to the meson build system.
 - Changed method for rpm packaging from CPack to manual packaging.

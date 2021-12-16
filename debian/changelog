@@ -1,3 +1,11 @@
+genpass2 (1.0.0-1) unstable; urgency=low
+
+    * The project is no longer written in C++, it was rewritten in C.
+    * Tweaks in how the data is processed and printed resulted in significant performance improvements.
+    * CMake was purged from the project, it only uses Meson now.
+
+ -- Nicolás Castellán <cnicolas.developer@gmail.com>  Thu, 16 Dec 2021 17:10:00 -0300
+
 genpass2 (0.2.3-1) unstable; urgency=low
 
     * Moved to the meson build system.

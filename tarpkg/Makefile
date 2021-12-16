@@ -1,21 +1,22 @@
 # This is the Makefile to package the project as .tar.gz
-VERSION = 0.2.3
+VERSION = 1.0.0
 
-# Standard build
-tar-pkg: build-all
+# Default target
+tar-pkg: all
 	@tar --transform "s/^tmp/genpass2-${VERSION}-Linux/" -zcf genpass2-${VERSION}-Linux.tar.gz tmp
 
-build-all: compress-man compile-src
+all: manpage meson-compile
 
-compress-man:
+manpage:
 	@mkdir -p tmp/share/man/man1
-	@gzip ../man/genpass2.1 -c >tmp/share/man/man1/genpass2.1.gz
+	@cp ../man/genpass2.1 tmp/share/man/man1/genpass2.1
 
-# I would use meson, but it's simpler and faster to just compile in this Makefile
-compile-src:
+meson-compile:
 	@mkdir -p tmp/bin
-	@c++ -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -O3 -o tmp/bin/genpass2 ../src/main.cpp
+	@if [ ! -e build ]; then meson setup .. build --buildtype=release; fi
+	@meson compile -C build
+	@cp build/src/genpass2 tmp/bin
 
 # Clean build artifacts
 clean:
-	@rm -rf tmp genpass2*.tar.gz
+	@rm -rf build tmp genpass2-${VERSION}-Linux.tar*
