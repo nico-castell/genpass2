@@ -20,9 +20,10 @@ Windows.
 	```shell
 	genpass2 16
 	```
-	If you input a negative number (such as `-128`), the program will error and tell you that it's not
-	a valid number. Any arguments after the first will be ignored. The maximum number of characters
-	the password can have is 4,294,967,296.
+	If you input a negative number (such as `-128`), the program will error and tell you that it's
+	not a valid number. Any arguments after the first will be ignored. The maximum number of
+	characters the password can have is 4,294,967,296. Why? Because for every character in the
+	password, we need a byte in memory.
 - **Variable:** This is the recommended way. You store the output in a variable, so the password
 	never appears on screen.
 	```shell
@@ -39,16 +40,15 @@ Windows.
 
 ---
 ## Build instructions and installation
-### Using Meson
-[Meson](https://mesonbuild.com/index.html) is a modern build system, to use it you will need to
-install Meson, and a C compiler.
+To build this project you will need two things, [Meson](https://mesonbuild.com/index.html) and a 
+C compiler.
 
-1. First clone this repository and change directory into it:
+1. First, clone this repository and change directory into it:
 	```shell
-	$ git clone https://gihtub.com/nico-castell/genpass2.git
-	$ cd genpass2
+	git clone https://github.com/nico-castell/genpass2.git
+	cd genpass2
 	```
-2. Prepare the build folder using meson:
+2. Second, prepare the build folder using meson:
 	```shell
 	meson --buildtype=release build
 	```
@@ -58,7 +58,6 @@ install Meson, and a C compiler.
 	```
 3. Use meson to build and install the project:
 	```shell
-	cd build
 	meson install -C build
 	```
 
