@@ -1,6 +1,6 @@
 [binaries]
-c       = ['ccache', arch + '-gcc' ]
-cpp     = ['ccache', arch + '-g++' ]
+c       = [ 'ccache', arch + '-gcc' ]
+cpp     = [ 'ccache', arch + '-g++' ]
 ld      = arch + '-ld'
 ar      = arch + '-ar'
 as      = arch + '-as'
@@ -8,4 +8,3 @@ size    = arch + '-size'
 objdump = arch + '-objdump'
 objcopy = arch + '-objcopy'
 strip   = arch + '-strip'
-
