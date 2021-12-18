@@ -1,5 +1,5 @@
 # This is the Makefile to package the project as .tar.gz
-VERSION = 1.0.1
+VERSION = 1.0.2
 
 # Default target
 tar-pkg: all

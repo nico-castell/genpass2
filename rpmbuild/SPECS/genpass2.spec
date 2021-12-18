@@ -1,5 +1,5 @@
 Name:    genpass2
-Version: 1.0.1
+Version: 1.0.2
 Release: 1
 Summary: Installs a command to generate very secure passwords from the command line.
 URL:     https://github.com/nico-castell/genpass2
@@ -29,6 +29,12 @@ This is a replacement program for the Golang based genpass proyect. By using C a
 %{_mandir}/man1/genpass2.1.*
 
 %changelog
+* Sat Dec 18 2021 Nicolás Castellán <cnicolas.developer@gmail.com> - 1.0.2-1
+- Handled possible failure points in fopen() and fread() functions by making the program stop
+  and return an error code.
+- The manpage now lists error codes 3 and 4 for failing to open /dev/urandom and failing to read
+  from /dev/urandom, respectively.
+
 * Thu Dec 16 2021 Nicolás Castellán <cnicolas.developer@gmail.com> - 1.0.1-1
 - Fixed wrong function call, from fgets() to fread(), this was causing the program to generate
   incomplete passwords.
