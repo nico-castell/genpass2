@@ -1,3 +1,4 @@
 # Ignore build artifacts
 *.tar*
-tmp
+[Tt]mp*
+[Bb]uild*
