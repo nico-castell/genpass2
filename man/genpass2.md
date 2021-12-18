@@ -1,4 +1,4 @@
-% genpass2(1) 1.0.1
+% genpass2(1) 1.0.2
 % Nicolás Castellán <cnicolas.developer@gmail.com>
 % Dec 2021
 
@@ -58,10 +58,19 @@ G*b9APs=DX^q-(&J@%x@
 : Success
 
 **1**
-: The first argument could not be parsed into a valid number.
+: The first argument could not be parsed into a valid number. Make sure the first number is between
+  0 and 4,293,967,296, without letters or symbols (including **-**).
 
 **2**
-: The program could not allocate enough memory for the password.
+: The program could not allocate enough memory for the password. Make sure you have enough free
+  memory; for every character you want to generate, you'll need a byte of free memory.
+
+**3**
+: The program failed to open /dev/urandom. Check that the file is enabled by the kernel.
+
+**4**
+: The program failed to read from /dev/urandom. Check that your user has permission to read from
+  this file.
 
 # COPYRIGHT
 Copyright © Nicolás Castellán 2021. License MIT. This software is provided "AS IS", there's no

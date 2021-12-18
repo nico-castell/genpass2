@@ -3,6 +3,7 @@
 All significant changes to **genpass2** will be documented here.
 
 - [Released](#released)
+	- [Version 1.0.2 - *2021-12-18*](#version-102---2021-12-18)
 	- [Version 1.0.1 - *2021-12-16*](#version-101---2021-12-16)
 	- [Version 1.0.0 - *2021-12-16*](#version-100---2021-12-16)
 	- [Version 0.2.3 - *2021-12-13*](#version-023---2021-12-13)
@@ -18,6 +19,10 @@ All significant changes to **genpass2** will be documented here.
 	- [Version 0.1.0 - *2021-10-11*](#version-010---2021-10-11)
 
 ## Released
+### Version [1.0.2](https://github.com/nico-castell/genpass2/releases/tag/1.0.2) - *2021-12-18*
+The program had no way to handle failing to open or read from */dev/urandom*. That is now handled
+by printing an error and exiting. The new error codes **3** and **4** were added to the manpage.
+
 ### Version [1.0.1](https://github.com/nico-castell/genpass2/releases/tag/1.0.1) - *2021-12-16*
 Well, this is embarrasing. I called `fgets()` instead of `fread()` which meant that the program
 didn't always output a complete password, that was fixed. But as if that wasn't enough, the program
