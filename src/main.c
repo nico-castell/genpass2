@@ -22,12 +22,20 @@ int main(int argc, char* argv[])
 	// memory to get crazy fast read speeds.
 	if (0 >= length || length > 4294967296)
 	{
-		fprintf(stderr, "ERROR: First argument is not a valid number\n");
+		fprintf(stderr, "ERROR: First argument is not a valid or acceptable number.\n");
 		return 1;
 	}
 
 	// Prepare reception of random data
 	FILE* urandom = fopen("/dev/urandom", "rb");  // /dev/urandom file
+
+	// fopen() will return a NULL pointer if it fails to open the file. That needs to make the
+	// program stop.
+	if (urandom == NULL)
+	{
+		fprintf(stderr, "ERROR: Could not open /dev/urandom.\n");
+		return 3;
+	}
 
 	unsigned char *h, *t;                     // Pointers to head and tail of the array
 	int sizeof_char = sizeof(unsigned char);  // Get the size of a character
@@ -42,8 +50,17 @@ int main(int argc, char* argv[])
 		return 2;
 	}
 
-	// Read all the random data at once
-	fread(h, sizeof_char, length, urandom);
+	// Read all the random data at once, handle errors in reading by bailing out.
+	if (fread(h, sizeof_char, length, urandom) != length)
+	{
+		fclose(urandom);
+		urandom = NULL;
+		free(h);
+		h = NULL, t = NULL;
+
+		fprintf(stderr, "ERROR: Problem reading from /dev/urandom.\n");
+		return 4;
+	}
 
 	// Process all the data using a moving pointer
 	for (unsigned char* p = h; p < t; p += sizeof_char)
