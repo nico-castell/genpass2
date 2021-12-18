@@ -1,0 +1,8 @@
+[constants]
+arch = 'arm-linux-gnueabi'
+
+[host_machine]
+system     = 'linux'
+cpu_family = 'arm'
+cpu        = 'arm'
+endian     = 'little'
