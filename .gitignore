@@ -2,7 +2,7 @@
 *~
 *.swp
 
-# Ignore build folder
-[Bb]uild/*
-[Oo]ut/*
+# Ignore build folder/s
+[Bb]uild*
+[Oo]ut*
 obj-*-linux-gnu
