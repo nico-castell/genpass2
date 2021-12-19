@@ -1,4 +1,4 @@
-genpass2 (1.0.1-1) unstable; urgency=medium
+genpass2 (1.0.2-1) unstable; urgency=medium
 
     * Handled possible failure points in fopen() and fread() functions by making the program stop
       and return an error code.
